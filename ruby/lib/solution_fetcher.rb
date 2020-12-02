@@ -11,9 +11,3 @@ def fetch_solution_for_day(day:)
 
   response.body.strip
 end
-
-day = gets.chomp
-
-File.open("#{__dir__}/inputs/day_#{day}.txt", 'w') do |f|
-  f.write(fetch_solution_for_day(day: day))
-end
