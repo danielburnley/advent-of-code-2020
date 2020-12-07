@@ -7,10 +7,8 @@ def find_column(pass_id)
   column_markers.each do |m|
     if m == 'F'
       high = (low + high)/2
-      # puts "Low: #{low}, High: #{high}"
     elsif m == 'B'
       low = ((low + high)/2.0).ceil
-      # puts "Low: #{low}, High: #{high}"
     end
   end
 
@@ -25,10 +23,8 @@ def find_row(pass_id)
   row_markers.each do |m|
     if m == 'L'
       high = (low + high)/2
-      # puts "Low: #{low}, High: #{high}"
     elsif m == 'R'
       low = ((low + high)/2.0).ceil
-      # puts "Low: #{low}, High: #{high}"
     end
   end
 
