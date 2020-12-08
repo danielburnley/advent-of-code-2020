@@ -18,13 +18,13 @@ class HandheldConsole
 
     instruction = @program[@counter]
 
-    case instruction[:op]
-    when 'acc'
-      @acc += instruction[:arg]
+    case instruction
+    in {op: 'acc', arg: arg}
+      @acc += arg
       @counter += 1
-    when 'jmp'
+    in {op: 'jmp', arg: arg}
       @counter += instruction[:arg]
-    when 'nop'
+    in {op: 'nop', arg: arg}
       @counter += 1
     end
   end
